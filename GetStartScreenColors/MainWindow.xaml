@@ -1,0 +1,77 @@
+﻿<Window x:Class="GetStartScreenColors.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Get Windows 8, 8.1 Start Screen Colors"
+        Height="155"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight">
+    <Grid Background="LightSteelBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="OS accent color:"
+                   Margin="10"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+        <TextBox x:Name="AccentColorResultTextBox"
+                 IsReadOnly="True"
+                 Text="-------"
+                 Margin="10"
+                 Grid.Row="0"
+                 Grid.Column="1" />
+        <Rectangle x:Name="AccentColorResultRectangle"
+                   Margin="10"
+                   Grid.Row="0"
+                   Grid.Column="2" />
+
+        <TextBlock Text="OS main text color:"
+                   Margin="10"
+                   Grid.Row="1"
+                   Grid.Column="0" />
+        <TextBox x:Name="MainColorResultTextBox"
+                 IsReadOnly="True"
+                 Text="-------"
+                 Margin="10"
+                 Grid.Row="1"
+                 Grid.Column="1" />
+        <Rectangle x:Name="MainColorResultRectangle"
+                   Margin="10"
+                   VerticalAlignment="Stretch"
+                   HorizontalAlignment="Stretch"
+                   Grid.Row="1"
+                   Grid.Column="2" />
+
+        <TextBlock Text="OS background color:"
+                   Margin="10"
+                   Grid.Row="2"
+                   Grid.Column="0" />
+        <TextBox x:Name="BackgroundColorResultTextBox"
+                 IsReadOnly="True"
+                 Text="-------"
+                 Margin="10"
+                 Grid.Row="2"
+                 Grid.Column="1" />
+        <Rectangle x:Name="BackgroundColorResultRectangle"
+                   Margin="10"
+                   VerticalAlignment="Stretch"
+                   HorizontalAlignment="Stretch"
+                   Grid.Row="2"
+                   Grid.Column="2" />
+
+        <Button Content="Get colors"
+                Margin="10"
+                Grid.Row="3"
+                Grid.Column="3"
+                Click="OnGetColorsButtonClick" />
+    </Grid>
+</Window>
